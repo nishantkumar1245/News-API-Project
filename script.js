@@ -11,6 +11,7 @@ async function fetchNews(query) {
   const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
   console.log("ENDPOINT HIT", res);
   const data = await res.json();
+  console.log(data);
   bindData(data.articles);
 }
 
